@@ -18,6 +18,7 @@ The app uses a phone-style UI with vertically scrollable reels (static images). 
 Run the following commands:
 
 npm install
+
 npm start
 
 
