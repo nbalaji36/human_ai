@@ -1,38 +1,479 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fb;
+  color: #1f2937;
+}
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.home-content {
+  max-width: 1100px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.home-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.design-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.design-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.design-card p {
+  margin-bottom: 20px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.design-card button {
+  border: none;
+  background-color: #111827;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.mockup-page {
+  min-height: 100vh;
+  padding: 50px 24px;
+  text-align: center;
+  background-color: #f4f6fb;
+}
+
+.mockup-page h1 {
+  margin-bottom: 10px;
+}
+
+.mockup-page p {
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #111827;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mockup-header {
+  margin-bottom: 28px;
+}
+
+.phone-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.phone-frame {
+  width: 320px;
+  height: 640px;
+  background: #111827;
+  border-radius: 36px;
+  padding: 14px;
+  position: relative;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 22px;
+  background: #000;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #d1d5db;
+  position: relative;
+}
+
+.reel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mockup-page {
+  min-height: 100vh;
+  padding: 40px 24px;
+  background-color: #f4f6fb;
+}
+
+.mockup-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 80vh;
+}
+
+.mockup-info {
+  flex: 1;
+  max-width: 480px;
+  text-align: left;
+}
+
+.mockup-info h1 {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.mockup-info p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+
+.mockup-phone-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mockup-nav-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.nav-button {
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background-color: #111827;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.primary-button:hover {
+  background-color: #1f2937;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.secondary-button {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.secondary-button:hover {
+  background-color: #f9fafb;
+}
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 900px) {
+  .mockup-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mockup-info {
+    text-align: center;
+    max-width: 700px;
   }
+
+  .mockup-nav-buttons {
+    justify-content: center;
+  }
+}
+
+.mockup-overlay-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.creator-info-area {
+  position: absolute;
+  bottom: 24px;
+  left: 16px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.creator-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.watermark-image-overlay {
+  position: absolute;
+  bottom: 150px;  
+  left: 29px;
+
+  width: 30px;    
+  height: auto;
+
+  z-index: 3;
+  opacity: 0.9;   
+}
+
+.ai-label-pill {
+  position: absolute;
+  top:20px;
+  left: 10px;
+
+  background: rgba(55, 65, 81, 0.9);
+  color: white;
+
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+
+  z-index: 3;
+
+  backdrop-filter: blur(4px);
+}
+
+.notification-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  padding: 20px;
+}
+
+.notification-card {
+  width: 85%;
+  max-width: 260px;
+  background: rgba(229, 231, 235, 0.96);
+  color: #111827;
+  border-radius: 18px;
+  padding: 20px 18px;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.notification-text {
+  margin: 0 0 16px 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.notification-button {
+  border: none;
+  background: #6b7280;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notification-button:hover {
+  background: #4b5563;
+}
+
+.report-trigger-button {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  z-index: 3;
+
+  border: none;
+  background: rgba(31, 41, 55, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.report-trigger-button:hover {
+  background: rgba(17, 24, 39, 0.95);
+}
+
+.report-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  padding: 20px;
+}
+
+.report-card {
+  width: 86%;
+  max-width: 270px;
+  background: rgba(243, 244, 246, 0.98);
+  border-radius: 18px;
+  padding: 20px 18px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+}
+
+.report-title {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.report-subtitle {
+  margin: 0 0 16px 0;
+  font-size: 0.88rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.report-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.report-option-button {
+  border: none;
+  background: #e5e7eb;
+  color: #111827;
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.report-option-button:hover {
+  background: #d1d5db;
+}
+
+.report-cancel-button,
+.report-done-button {
+  margin-top: 14px;
+  border: none;
+  background: #6b7280;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.report-cancel-button:hover,
+.report-done-button:hover {
+  background: #4b5563;
+}
+
+.reel-feed {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.reel-feed::-webkit-scrollbar {
+  display: none;
+}
+
+.reel-slide {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+.reel-slide-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
