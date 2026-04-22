@@ -4,10 +4,9 @@ function HomePage() {
   return (
     <div className="home-page">
       <div className="home-content">
-        <h1>AI Content Credibility Prototype</h1>
+        <h1>Content Credibility Prototype</h1>
         <p className="home-subtitle">
-          Explore four interface concepts for disclosing and reporting
-          AI-generated or copied content in a reels-style social media setting.
+          Explore four interface concepts for marking and verifying human-created content as being separate from AI-created content.
         </p>
 
         <div className="card-grid">
@@ -20,11 +19,6 @@ function HomePage() {
             title="Label"
             description="A small disclosure tag placed near post metadata."
             route="/label"
-          />
-          <DesignCard
-            title="Notification"
-            description="A warning shown before or during viewing."
-            route="/notification"
           />
           <DesignCard
             title="Reporting Flow"

@@ -6,14 +6,14 @@ function LabelPage() {
   return (
     <MockupLayout
       title="Label Design"
-      description="This concept adds a small platform-style label to indicate that selected content was made with AI. Only reels identified as AI-generated display the label."
+      description="This concept adds a small platform-style label to indicate that selected content was made by a human and not AI. Only reels identified as human-created display the label."
       prevRoute="/watermark"
-      nextRoute="/notification"
+      nextRoute="/reporting"
     >
       <ReelFeed
         reels={reels}
         renderOverlay={(reel) =>
-          reel.isAI ? <div className="ai-label-pill">Made with AI</div> : null
+          reel.isAI ? <div className="ai-label-pill">Human-Created Content</div> : null
         }
       />
     </MockupLayout>

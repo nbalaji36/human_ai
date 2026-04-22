@@ -30,7 +30,7 @@ function ReportingPage() {
     <MockupLayout
       title="Reporting Flow Design"
       description="This concept gives users a way to flag suspicious, copied, or AI-generated content through a simple reporting flow. Each reel can be reported individually."
-      prevRoute="/notification"
+      prevRoute="/label"
     >
       <ReelFeed
         reels={reels}

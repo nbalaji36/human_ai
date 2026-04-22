@@ -7,7 +7,7 @@ function WatermarkPage() {
   return (
     <MockupLayout
       title="Watermark Design"
-      description="This concept places a watermark image near the creator information area to indicate that AI-generated content is being shown. Only selected reels display the watermark."
+      description="This concept places a watermark image near the creator information area to indicate that human-created content is being shown. Only selected reels display the watermark."
       nextRoute="/label"
     >
       <ReelFeed
@@ -17,7 +17,7 @@ function WatermarkPage() {
             <div className="creator-info-area">
               <div className="creator-row">
                 <div className="creator-avatar"></div>
-                <span className="creator-name">@creator_name</span>
+                {/* <span className="creator-name">@creator_name</span> */}
               </div>
             </div>
 

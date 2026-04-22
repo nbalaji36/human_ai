@@ -282,9 +282,9 @@ body {
 .watermark-image-overlay {
   position: absolute;
   bottom: 150px;  
-  left: 29px;
+  left: 15px;
 
-  width: 30px;    
+  width: 42px;    
   height: auto;
 
   z-index: 3;
@@ -293,7 +293,7 @@ body {
 
 .ai-label-pill {
   position: absolute;
-  top:20px;
+  top:30px;
   left: 10px;
 
   background: rgba(55, 65, 81, 0.9);
@@ -358,7 +358,7 @@ body {
 
 .report-trigger-button {
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 16px;
   z-index: 3;
 
